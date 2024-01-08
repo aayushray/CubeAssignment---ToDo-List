@@ -6,8 +6,8 @@ This project contains the backend and frontend components for [Project Name]. Th
 
 Before running the project, make sure you have the following installed:
 
-- Python (version 3.10.12)
-- Node.js (version 18.8.0)
+- Python (version 3.10)
+- Node.js (version 18.8)
 
 To set up the backend, follow these steps:
 
