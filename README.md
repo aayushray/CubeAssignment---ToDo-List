@@ -42,7 +42,32 @@ To get started with the project, follow these steps:
     pip install -r requirements.txt
     ```
 
-3. Run the Django development server:
+3. To generate and replace the secret key in the Django settings, follow these steps:
+
+    1. Open the `backend/backend/settings.py` file.
+    2. Locate the section with the comment `# SECURITY WARNING`.
+    3. Generate a New Secret Key:
+        1. Open a Python shell, and run the following commands:
+
+            ```python
+            import secrets
+            secrets.token_urlsafe(50)
+            ```
+        2. Copy the generated secret key.
+
+    3. Replace the line `SECRET_KEY = config('DJANGO_SECRET_KEY')` with the following code:
+
+        ```python
+        SECRET_KEY = 'your_generated_secret_key'
+        ```
+
+        Replace `'your_generated_secret_key'` with the actual secret key you generated.
+
+    4. Save the `settings.py` file.
+
+    It is important to keep the secret key confidential and not share it publicly.
+
+4. Run the Django development server:
     ```bash
     python manage.py runserver
     ```
